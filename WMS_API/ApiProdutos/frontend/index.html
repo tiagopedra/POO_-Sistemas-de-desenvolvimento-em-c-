@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>WMS Escolar</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>BEM WMS</h1>
+        <p>Warehouse Management System de controle de entrada e saída de estoque</p>
+      </div>
+
+      <nav class="menu">
+        <button onclick="irParaDashboard()">Dashboard</button>
+        <button onclick="irParaCadastro()">Cadastro</button>
+        <button onclick="irParaTabelaItens()">Tabela de Itens</button>
+        <button onclick="irParaMateriais()">Materiais</button>
+        <button onclick="listarMateriais()">Todos</button>
+        <button onclick="listarAtivos()">Ativos</button>
+        <button onclick="listarInativos()">Inativos</button>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <div>
+          <h2>Controle de Estoque</h2>
+          <span>Materiais escolares • Saída por lote • ROI</span>
+        </div>
+
+        <button class="btn-primary small" onclick="atualizarTudo()">Atualizar</button>
+      </header>
+
+      <section id="dashboard" class="cards dashboard-cards">
+        <div class="card">
+          <p>Total de Materiais</p>
+          <strong id="totalMateriais">0</strong>
+        </div>
+
+        <div class="card">
+          <p>Itens Ativos</p>
+          <strong id="totalAtivos">0</strong>
+        </div>
+
+        <div class="card">
+          <p>Itens Inativos</p>
+          <strong id="totalInativos">0</strong>
+        </div>
+
+        <div class="card">
+          <p>Unidades em Estoque</p>
+          <strong id="totalUnidadesEstoque">0</strong>
+        </div>
+
+        <div class="card money-card">
+          <p>Valor Investido</p>
+          <strong id="valorInvestido">R$ 0,00</strong>
+        </div>
+
+        <div class="card money-card">
+          <p>Venda Estimada</p>
+          <strong id="valorVendaEstimado">R$ 0,00</strong>
+        </div>
+
+        <div class="card money-card">
+          <p>Lucro Estimado</p>
+          <strong id="lucroEstimado">R$ 0,00</strong>
+        </div>
+
+        <div class="card roi-card">
+          <p>ROI</p>
+          <strong id="roiPercentual">0%</strong>
+        </div>
+      </section>
+
+      <section class="panel dashboard-table-panel">
+        <div class="list-header">
+          <div>
+            <h3>Dashboard financeiro por material</h3>
+            <span>Valores calculados com base no custo, venda e estoque atual dos lotes.</span>
+          </div>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Material</th>
+                <th>Categoria</th>
+                <th>Estoque</th>
+                <th>Investido</th>
+                <th>Venda estimada</th>
+                <th>Lucro</th>
+                <th>ROI</th>
+              </tr>
+            </thead>
+            <tbody id="tabelaDashboard">
+              <tr>
+                <td colspan="7">Carregando dados...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="cadastro" class="grid">
+        <div class="panel">
+          <div class="panel-title">
+            <span class="step">1</span>
+            <div>
+              <h3>Cadastrar material escolar</h3>
+              <p>Informe os dados do material e o primeiro lote em estoque.</p>
+            </div>
+          </div>
+
+          <form id="formCadastro">
+            <input type="hidden" id="modoEdicao" value="false" />
+            <input type="hidden" id="idOriginalEdicao" />
+
+            <div class="form-group">
+              <label for="id">ID do material</label>
+              <input type="number" id="id" placeholder="Ex: 13" required />
+            </div>
+
+            <div class="form-group">
+              <label for="nome">Nome do material</label>
+              <input type="text" id="nome" placeholder="Ex: Mochila Escolar" required />
+            </div>
+
+            <div class="form-group">
+              <label for="categoria">Categoria</label>
+              <input type="text" id="categoria" placeholder="Ex: Mochila, Caneta, Cola..." required />
+            </div>
+
+            <div class="form-group">
+              <label for="ativo">Status</label>
+              <select id="ativo">
+                <option value="true">Ativo</option>
+                <option value="false">Inativo</option>
+              </select>
+            </div>
+
+            <div class="section-divider">
+              <h4>Dados do lote</h4>
+              <p>O lote será usado para controlar o estoque, a saída e o cálculo financeiro.</p>
+            </div>
+
+            <div class="form-group">
+              <label for="loteId">ID do lote</label>
+              <input type="number" id="loteId" placeholder="Ex: 13" required />
+            </div>
+
+            <div class="form-group">
+              <label for="codigoLote">Código do lote</label>
+              <input type="text" id="codigoLote" placeholder="Ex: MOC001" required />
+            </div>
+
+            <div class="form-group">
+              <label for="quantidade">Quantidade em estoque</label>
+              <input type="number" id="quantidade" placeholder="Ex: 50" required />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="valorCusto">Valor de custo unitário</label>
+                <input type="number" id="valorCusto" placeholder="Ex: 10.50" step="0.01" required />
+              </div>
+
+              <div class="form-group">
+                <label for="valorVenda">Valor de venda unitário</label>
+                <input type="number" id="valorVenda" placeholder="Ex: 18.90" step="0.01" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="dataEntrada">Data de entrada</label>
+                <input type="date" id="dataEntrada" required />
+              </div>
+
+              <div class="form-group">
+                <label for="dataVencimento">Data de vencimento</label>
+                <input type="date" id="dataVencimento" />
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" id="btnSalvarMaterial" class="btn-primary">
+                Cadastrar material
+              </button>
+
+              <button type="button" id="btnCancelarEdicao" class="btn-secondary hidden" onclick="cancelarEdicao()">
+                Cancelar edição
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="panel">
+          <div class="panel-title">
+            <span class="step">2</span>
+            <div>
+              <h3>Registrar saída de estoque</h3>
+              <p>Escolha o material e informe a quantidade que será retirada.</p>
+            </div>
+          </div>
+
+          <form id="formSaida">
+            <div class="form-group">
+              <label for="saidaMaterialId">Material</label>
+              <select id="saidaMaterialId" required>
+                <option value="">Selecione um material</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="saidaQuantidade">Quantidade de saída</label>
+              <input type="number" id="saidaQuantidade" placeholder="Ex: 10" required />
+            </div>
+
+            <button type="submit" class="btn-danger">Registrar saída</button>
+          </form>
+
+          <div id="resultadoSaida" class="message"></div>
+
+          <div class="hint">
+            <strong>Como funciona?</strong>
+            <p>A saída baixa primeiro os lotes com vencimento mais próximo. Para itens sem vencimento, usa a data de entrada.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="tabela-itens" class="panel tabela-lotes-panel">
+        <div class="list-header">
+          <div>
+            <h3>Tabela de itens, códigos e lotes</h3>
+            <span>Consulta rápida dos materiais cadastrados e seus respectivos lotes.</span>
+          </div>
+
+          <div class="filters">
+            <button onclick="listarMateriais()">Todos</button>
+            <button onclick="listarAtivos()">Ativos</button>
+            <button onclick="listarInativos()">Inativos</button>
+          </div>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>ID Material</th>
+                <th>Material</th>
+                <th>Categoria</th>
+                <th>Status</th>
+                <th>ID Lote</th>
+                <th>Código do Lote</th>
+                <th>Quantidade</th>
+                <th>Entrada</th>
+                <th>Vencimento</th>
+                <th>Custo Unit.</th>
+                <th>Venda Unit.</th>
+              </tr>
+            </thead>
+
+            <tbody id="tabelaItensLotes">
+              <tr>
+                <td colspan="11">Carregando itens...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="materiais" class="panel">
+        <div class="list-header">
+          <div>
+            <h3>Materiais cadastrados</h3>
+            <span id="statusLista">Carregando...</span>
+          </div>
+
+          <div class="filters">
+            <button onclick="listarMateriais()">Todos</button>
+            <button onclick="listarAtivos()">Ativos</button>
+            <button onclick="listarInativos()">Inativos</button>
+          </div>
+        </div>
+
+        <div id="listaMateriais" class="material-list"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
