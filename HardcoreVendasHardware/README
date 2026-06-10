@@ -1,0 +1,373 @@
+# HardCor — Sistema de Gestão para Distribuidora de Hardware
+
+## 📋 Descrição do Projeto
+
+Sistema web de gestão empresarial desenvolvido para controle de produtos, clientes, pedidos e análise financeira de uma distribuidora de componentes de hardware. Construído com ASP.NET Core (C#) no backend e JavaScript Vanilla, HTML5 e CSS3 no frontend, seguindo o padrão Single Page Application (SPA).
+
+---
+
+## 📊 Dados e Contexto
+
+### Contexto do Negócio
+
+**Cenário**: Uma distribuidora de componentes de hardware precisa gerenciar seu catálogo de produtos, base de clientes e fluxo completo de pedidos, com visibilidade financeira em tempo real.
+
+**Problema a Resolver**: Centralizar o controle do ciclo de vendas — do cadastro de produtos com controle de estoque à emissão e acompanhamento de pedidos — e oferecer indicadores financeiros consolidados para tomada de decisão.
+
+**Aplicação Prática**:
+- Controle de estoque de componentes (CPU, GPU, RAM, SSD, Motherboard)
+- Gestão de clientes e seus respectivos pedidos
+- Acompanhamento do status de pedidos em tempo real
+- Análise de receita, custo e margem de lucro no Dashboard
+
+### Dados Iniciais (Seed)
+
+O sistema é inicializado com dados de exemplo para demonstração imediata.
+
+**Produtos cadastrados por padrão:**
+
+| Nome | Categoria | Preço | Custo | Estoque |
+|------|-----------|-------|-------|---------|
+| Processador Intel Core i9-13900K | CPU | R$ 3.299,99 | R$ 2.100,00 | 15 |
+| GPU NVIDIA GeForce RTX 4080 Super | GPU | R$ 5.499,99 | R$ 3.800,00 | 8 |
+| Memória RAM DDR5 32GB 6000MHz | RAM | R$ 899,90 | R$ 550,00 | 30 |
+| SSD NVMe 2TB PCIe 4.0 | SSD | R$ 1.149,90 | R$ 720,00 | 22 |
+| Placa-Mãe Z790 ATX DDR5 | Motherboard | R$ 2.799,00 | R$ 1.800,00 | 10 |
+| GTX 1050 ti | GPU | R$ 2.799,00 | R$ 1.600,00 | 10 |
+
+**Clientes cadastrados por padrão:**
+
+| Nome | Email | Localização |
+|------|-------|-------------|
+| João Silva | joao@email.com | Curitiba/PR |
+| Maria Souza | maria@email.com | Curitiba/PR |
+| Pedro Almeida | pedro@email.com | Curitiba/PR |
+
+> **Atenção:** por ser um repositório em memória, todos os dados criados durante a execução são perdidos ao reiniciar a aplicação. Apenas os dados de seed são restaurados automaticamente.
+
+---
+
+## 🏗️ Arquitetura do Sistema
+
+```
+ApiVendasHardwarenew/
+│
+├── Models/
+│   ├── Cliente.cs          # Modelo de cliente
+│   ├── Produto.cs          # Modelo de produto com estoque e custo
+│   ├── Pedido.cs           # Modelo de pedido com status e histórico
+│   └── ItemPedido.cs       # Item individual de um pedido
+│
+├── Repositories/
+│   └── HardwareRepository.cs   # Repositório singleton com todos os dados
+│
+├── Routes/
+│   ├── ROTA_GET.cs         # Endpoints HTTP GET
+│   ├── ROTA_POST.cs        # Endpoints HTTP POST
+│   ├── ROTA_PUT.cs         # Endpoints HTTP PUT
+│   └── ROTA_DELETE.cs      # Endpoints HTTP DELETE
+│
+├── Services/
+│   └── PedidoService.cs    # Serviços de negócio para pedidos
+│
+├── wwwroot/
+│   ├── Index.html          # Estrutura HTML da SPA
+│   ├── script.js           # Lógica JavaScript do frontend
+│   └── style.css           # Estilização da interface
+│
+├── Properties/
+│   └── launchSettings.json # Configurações de execução
+│
+├── appsettings.json        # Configurações da aplicação
+└── Program.cs              # Ponto de entrada e configuração do pipeline
+```
+
+O projeto segue uma separação clara de responsabilidades em três camadas:
+
+```
+┌─────────────────────────────────────┐
+│           FRONTEND (wwwroot)        │
+│   HTML + CSS + JavaScript Vanilla   │
+│   Comunicação via fetch() / REST    │
+└────────────────┬────────────────────┘
+                 │ HTTP / JSON
+┌────────────────▼────────────────────┐
+│         BACKEND (ASP.NET Core)      │
+│   Minimal API — Rotas organizadas   │
+│   por arquivo (GET, POST, PUT, DEL) │
+└────────────────┬────────────────────┘
+                 │
+┌────────────────▼────────────────────┐
+│     REPOSITÓRIO (In-Memory)         │
+│   HardwareRepository — Singleton    │
+│   Dados mantidos em listas internas │
+└─────────────────────────────────────┘
+```
+
+O backend não utiliza banco de dados externo. Todos os dados são mantidos em listas em memória dentro do `HardwareRepository`, registrado como Singleton no container de injeção de dependência do ASP.NET Core.
+
+---
+
+## 🚀 Instalação e Configuração
+
+### Requisitos
+- [.NET SDK](https://dotnet.microsoft.com/download) instalado
+- Navegador web moderno
+
+### Instalação
+
+1. Clone ou extraia o projeto e acesse o diretório:
+```bash
+cd ApiVendasHardwarenew
+```
+
+2. Execute o backend:
+```bash
+dotnet run
+```
+
+O terminal exibirá:
+```
+Now listening on: http://localhost:5000
+Application started. Press Ctrl+C to shut down.
+```
+
+3. Acesse o frontend no navegador:
+```
+http://localhost:8080
+```
+
+O próprio ASP.NET Core serve os arquivos estáticos da pasta `wwwroot` automaticamente.
+
+---
+
+## 📖 Como Usar
+
+### Interface Web (SPA)
+
+O sistema é uma Single Page Application com quatro módulos acessíveis pela sidebar:
+
+#### 1️⃣ **Dashboard**
+- Indicadores gerais: total de produtos, clientes e pedidos
+- Status do estoque: componentes ativos (verde) e inativos (vermelho)
+- Painel financeiro: Valor Investido, Receita de Vendas e Lucro (com indicação visual de positivo/negativo)
+
+#### 2️⃣ **Produtos**
+- Listagem com ID, Nome, Categoria, Fabricante, Modelo, Estoque e Status
+- Cadastro via modal com campos de Nome, Categoria, Fabricante, Modelo, Preço e Estoque
+- Edição e exclusão com confirmação
+- Status calculado automaticamente pelo estoque disponível
+
+#### 3️⃣ **Clientes**
+- Listagem com Nome, Email e Telefone
+- Cadastro e edição via prompts do navegador
+- Exclusão com confirmação
+
+#### 4️⃣ **Pedidos**
+- Listagem com Número, Cliente, Data, Status (badge colorido) e Total
+- Criação com busca dinâmica de cliente, seleção de múltiplos produtos, validação de estoque e cálculo de total em tempo real
+- Cancelamento com atualização automática do Dashboard
+- Visualização detalhada com itens, quantidades, preços e observações
+
+### API REST
+
+A API é executada em `http://localhost:5000`. Todos os endpoints retornam e recebem dados em `application/json`.
+
+**Dashboard:**
+
+| Método | Rota | Descrição |
+|--------|------|-----------|
+| `GET` | `/api/dashboard` | Retorna estatísticas consolidadas do sistema |
+
+**Produtos:**
+
+| Método | Rota | Descrição |
+|--------|------|-----------|
+| `GET` | `/api/produtos` | Lista todos os produtos |
+| `GET` | `/api/produtos/{id}` | Retorna produto por ID |
+| `GET` | `/api/produtos/filtro/categoria/{categoria}` | Filtra por categoria |
+| `GET` | `/api/produtos/filtro/disponiveis` | Lista produtos com estoque > 0 |
+| `POST` | `/api/produtos` | Cadastra novo produto |
+| `PUT` | `/api/produtos/{id}` | Atualiza produto existente |
+| `DELETE` | `/api/produtos/{id}` | Remove produto |
+
+**Clientes:**
+
+| Método | Rota | Descrição |
+|--------|------|-----------|
+| `GET` | `/api/clientes` | Lista todos os clientes |
+| `GET` | `/api/clientes/{id}` | Retorna cliente por ID |
+| `POST` | `/api/clientes` | Cadastra novo cliente |
+| `PUT` | `/api/clientes/{id}` | Atualiza cliente existente |
+| `DELETE` | `/api/clientes/{id}` | Remove cliente |
+
+**Pedidos:**
+
+| Método | Rota | Descrição |
+|--------|------|-----------|
+| `GET` | `/api/pedidos` | Lista todos os pedidos |
+| `GET` | `/api/pedidos/{id}` | Retorna pedido por ID |
+| `GET` | `/api/pedidos/cliente/{clienteId}` | Lista pedidos de um cliente |
+| `GET` | `/api/pedidos/{id}/historico` | Retorna histórico de status do pedido |
+| `GET` | `/api/pedidos/{id}/resumo` | Retorna resumo financeiro do pedido |
+| `POST` | `/api/pedidos` | Cria novo pedido |
+| `PUT` | `/api/pedidos/{id}/cancelar` | Cancela um pedido |
+| `DELETE` | `/api/pedidos/{id}` | Remove pedido |
+
+---
+
+## 🧮 Modelos de Dados
+
+### Produto (`Models/Produto.cs`)
+
+| Propriedade | Tipo | Descrição |
+|-------------|------|-----------|
+| `Id` | `int` | Identificador único |
+| `Nome` | `string` | Nome completo do produto |
+| `Categoria` | `string` | Categoria (CPU, GPU, RAM, SSD, Motherboard) |
+| `Fabricante` | `string` | Fabricante do componente |
+| `Modelo` | `string` | Modelo específico |
+| `Preco` | `decimal` | Preço de venda ao cliente |
+| `PrecoCusto` | `decimal` | Valor simulado de custo/compra |
+| `EstoqueDisponivel` | `int` | Quantidade disponível em estoque |
+| `Descricao` | `string` | Descrição técnica do produto |
+| `Ativo` | `bool` | `true` se `EstoqueDisponivel > 0` (calculado) |
+
+**Métodos de negócio:** `TemEstoque()`, `ReduzirEstoque()`, `ReabastecerEstoque()`
+
+---
+
+### Pedido (`Models/Pedido.cs`)
+
+| Propriedade | Tipo | Descrição |
+|-------------|------|-----------|
+| `Id` | `int` | Identificador único |
+| `ClienteId` | `int` | Referência ao cliente |
+| `DataPedido` | `DateTime` | Data de criação (UTC) |
+| `Status` | `StatusPedido` | Status atual do pedido |
+| `Itens` | `List<ItemPedido>` | Lista de itens do pedido |
+| `Historico` | `List<HistoricoStatus>` | Registro de transições de status |
+| `Observacoes` | `string?` | Observações opcionais |
+| `ValorTotal` | `decimal` | Soma dos subtotais dos itens (calculado) |
+
+**Enum `StatusPedido`:**
+```
+0 - Pendente
+1 - Confirmado
+2 - EmProcessamento
+3 - Enviado
+4 - Entregue
+5 - Cancelado
+```
+
+**Métodos de negócio:** `Confirmar()`, `Cancelar()`, `AvancarStatus()`, `ObterResumo(decimal desconto)`
+
+---
+
+### ItemPedido (`Models/ItemPedido.cs`)
+
+| Propriedade | Tipo | Descrição |
+|-------------|------|-----------|
+| `Id` | `int` | Identificador único |
+| `ProdutoId` | `int` | Referência ao produto |
+| `NomeProduto` | `string` | Nome do produto no momento da venda |
+| `Quantidade` | `int` | Quantidade comprada |
+| `PrecoUnitario` | `decimal` | Preço unitário no momento da venda |
+| `Subtotal` | `decimal` | `PrecoUnitario × Quantidade` (calculado) |
+
+---
+
+### Cliente (`Models/Cliente.cs`)
+
+| Propriedade | Tipo | Descrição |
+|-------------|------|-----------|
+| `Id` | `int` | Identificador único |
+| `Nome` | `string` | Nome completo |
+| `Email` | `string` | Endereço de e-mail |
+| `Telefone` | `string` | Número de telefone |
+| `Endereco` | `string` | Endereço completo |
+
+---
+
+## 📈 Cálculos Financeiros
+
+Todos os cálculos são executados no JavaScript do frontend, na função `calcularFinancas()` em `script.js`.
+
+### Valor Investido
+```
+Valor Investido = Σ (PrecoCusto[i] × EstoqueDisponivel[i])
+```
+Representa o capital total imobilizado no estoque atual.
+
+### Receita de Vendas
+```
+Receita = Σ valorTotal[p]  onde  status[p] ≠ 5 (Cancelado)
+```
+Soma dos valores totais de todos os pedidos não cancelados.
+
+### Lucro
+```
+Lucro (R$) = Receita de Vendas − Valor Investido
+Lucro (%)  = (Lucro / Valor Investido) × 100
+```
+
+**Exemplo:**
+- Produto com `Preco = R$ 200,00` e `PrecoCusto = R$ 100,00`
+- Lucro por unidade = R$ 200,00 − R$ 100,00 = **R$ 100,00**
+- Porcentagem de lucro = (100 / 100) × 100 = **100%**
+
+O card de Lucro possui comportamento visual dinâmico: **verde** quando positivo ou zero, **vermelho** quando negativo.
+
+---
+
+## 🧪 Tecnologias Utilizadas
+
+### Backend
+
+| Tecnologia | Descrição |
+|------------|-----------|
+| C# | Linguagem principal do backend |
+| ASP.NET Core | Framework web — Minimal API |
+| .NET | Runtime da aplicação |
+
+### Frontend
+
+| Tecnologia | Descrição |
+|------------|-----------|
+| HTML5 | Estrutura das páginas |
+| CSS3 | Estilização e layout responsivo |
+| JavaScript ES6+ | Lógica de interface, navegação e cálculos |
+
+### Padrões e Conceitos
+- Arquitetura REST
+- Padrão Repository
+- SPA com navegação por seções
+- Injeção de dependência via ASP.NET Core DI Container
+- Singleton de repositório em memória
+
+---
+
+## ⚙️ Configurações
+
+### URL da API (`script.js`)
+```javascript
+const API_URL = "http://localhost:5000/api";
+```
+Caso a porta seja alterada no `launchSettings.json`, esta constante deve ser atualizada.
+
+### Porta de execução (`launchSettings.json`)
+```json
+{
+  "applicationUrl": "http://localhost:5000"
+}
+```
+
+---
+
+## 🤝 Contribuições
+
+Projeto acadêmico desenvolvido para fins de aprendizado em desenvolvimento web com ASP.NET Core.
+
+## 📄 Licença
+
+Uso educacional.

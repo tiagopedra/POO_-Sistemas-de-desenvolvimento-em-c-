@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HardCore ERP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<div id="modalEditar" class="modal" style="display:none;">
+    <div class="modal-content">
+
+        <h2>Editar Produto</h2>
+
+        <input type="hidden" id="editId">
+
+        <label>Nome</label>
+        <input type="text" id="editNome">
+
+        <label>Categoria</label>
+        <input type="text" id="editCategoria">
+
+        <label>Fabricante</label>
+        <input type="text" id="editFabricante">
+
+        <label>Modelo</label>
+        <input type="text" id="editModelo">
+
+       <label>Preço de Custo (R$)</label>
+<input type="number" id="editPrecoCusto" min="0" step="0.01">
+
+<label>Preço de Venda (R$)</label>
+<input type="number" id="editPrecoVenda" min="0" step="0.01">
+
+<label>Estoque</label>
+<input type="number" id="editEstoque">
+
+        <br><br>
+
+        <button onclick="salvarEdicao()">
+            Salvar
+        </button>
+
+        <button onclick="fecharModal()">
+            Cancelar
+        </button>
+
+    </div>
+</div>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo">HC</div>
+        <div>
+          <div class="brand-name">HardCore </div>
+          <div class="brand-sub">Distribuidora de Hardware</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#" class="nav-item active" onclick="abrirDashboard(event)">
+          <span class="nav-icon">▦</span> Dashboard
+        </a>
+        <a href="#" class="nav-item" onclick="abrirProdutos(event)">
+          <span class="nav-icon">▣</span> Produtos
+        </a>
+        <a href="#" class="nav-item" onclick="abrirClientes(event)">
+          <span class="nav-icon">◉</span> Clientes
+        </a>
+        <a href="#" class="nav-item" onclick="abrirPedidos(event)">
+          <span class="nav-icon">⬢</span> Pedidos
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="user">
+          <div class="avatar">AS</div>
+          <div>
+            <div class="user-name">Admin Sistema</div>
+            <div class="user-role">Administrador</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+      <header class="topbar">
+        <input
+    type="text"
+    id="globalSearch"
+    class="search"
+    placeholder="Buscar..." />
+        <div class="topbar-actions">
+         
+          <div class="avatar sm">AS</div>
+        </div>
+      </header>
+
+         <!-- DASHBOARD -->
+      <section id="dashboard" class="page">
+        <div class="page-header">
+          <div>
+            <h1>Dashboard</h1>
+            <p class="muted">Visão geral do sistema</p>
+          </div>
+        </div>
+
+        <!-- Cards gerais (existentes + novos) -->
+        <div class="cards">
+          <div class="card kpi">
+            <div class="kpi-label">Total de Produtos</div>
+            <div class="kpi-value" id="kpiProdutos">0</div>
+            <div class="kpi-foot">Componentes cadastrados</div>
+          </div>
+          <div class="card kpi">
+            <div class="kpi-label">Total de Clientes</div>
+            <div class="kpi-value" id="kpiClientes">0</div>
+            <div class="kpi-foot">Clientes ativos</div>
+          </div>
+          <div class="card kpi">
+            <div class="kpi-label">Total de Pedidos</div>
+            <div class="kpi-value" id="kpiPedidos">0</div>
+            <div class="kpi-foot">Pedidos registrados</div>
+          </div>
+        </div>
+ <!-- ── NOVOS: Cards de componentes ── -->
+        <h2 class="dash-section-title">Componentes</h2>
+        <div class="cards">
+          <div class="card kpi">
+            <div class="kpi-label">Componentes Ativos</div>
+            <div class="kpi-value kpi-ativo" id="kpiAtivos">0</div>
+            <div class="kpi-foot">Estoque &gt; 0</div>
+          </div>
+          <div class="card kpi">
+            <div class="kpi-label">Componentes Inativos</div>
+            <div class="kpi-value kpi-inativo" id="kpiInativos">0</div>
+            <div class="kpi-foot">Estoque zerado</div>
+          </div>
+          <div class="card kpi">
+            <div class="kpi-label">Total em Estoque</div>
+            <div class="kpi-value" id="kpiTotalEstoque">0</div>
+            <div class="kpi-foot">Unidades disponíveis</div>
+          </div>
+        </div>
+ 
+        <!-- ── NOVO: Seção Financeira ── -->
+        <h2 class="dash-section-title">Finanças</h2>
+        <div class="cards cards-financas">
+          <div class="card kpi">
+            <div class="kpi-label">Valor Investido</div>
+            <div class="kpi-value kpi-investido" id="kpiInvestido">R$ 0,00</div>
+            <div class="kpi-foot">Custo total do estoque</div>
+          </div>
+          <div class="card kpi">
+  <div class="kpi-label">Receita de Vendas</div>
+  <div class="kpi-value" id="kpiReceita">R$ 0,00</div>
+  <div class="kpi-foot">Pedidos confirmados</div>
+</div>
+<div class="card kpi">
+  <div class="kpi-label">Custo dos Produtos Vendidos</div>
+  <div class="kpi-value" id="kpiCusto">R$ 0,00</div>
+  <div class="kpi-foot">Custo de aquisição vendido</div>
+</div>
+<div class="card kpi kpi-card-lucro">
+            <div class="kpi-label">Lucro</div>
+            <div class="kpi-value kpi-lucro" id="kpiLucroValor">R$ 0,00</div>
+            <div class="kpi-foot kpi-lucro" id="kpiLucroPercent">0%</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRODUTOS -->
+      <section id="produtos" class="page" style="display:none">
+        <div class="page-header">
+          <div>
+            <h1>Produtos</h1>
+            <p class="muted">Gerencie o catálogo de hardware</p>
+          </div>
+          <button class="btn btn-primary" onclick="adicionarProduto()">+ Adicionar</button>
+        </div>
+        <div class="card">
+          <table class="table">
+            <thead>
+  <tr>
+  <th>ID</th>
+  <th>Nome</th>
+  <th>Categoria</th>
+  <th>Fabricante</th>
+  <th>Modelo</th>
+  <th>Estoque</th>
+  <th>Preço</th>
+  <th>Status</th>   
+  <th>Ações</th>
+</tr>
+            </thead>
+            <tbody id="tbodyProdutos"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- CLIENTES -->
+      <section id="clientes" class="page" style="display:none">
+        <div class="page-header">
+          <div>
+            <h1>Clientes</h1>
+            <p class="muted">Base de clientes</p>
+          </div>
+          <button class="btn btn-primary" onclick="adicionarCliente()">+ Adicionar</button>
+        </div>
+        <div class="card">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th class="num">Ações</th>
+              </tr>
+            </thead>
+            <tbody id="tbodyClientes"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- PEDIDOS -->
+     <section id="pedidos" class="page" style="display:none" data-pedidos-container>
+  <div id="container-pedidos"></div>
+</section>
+       
+    </main>
+  </div>
+
+<script src="script.js"></script>
+
+<script>
+  // Chame quando o usuário navegar para a aba Pedidos
+  document.addEventListener('DOMContentLoaded', () => {
+    PedidosModule.init('container-pedidos');
+  });
+</script>
+</body>
+</html>

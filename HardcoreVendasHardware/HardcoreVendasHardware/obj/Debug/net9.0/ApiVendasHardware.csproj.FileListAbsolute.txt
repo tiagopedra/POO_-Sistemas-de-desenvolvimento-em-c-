@@ -1,0 +1,62 @@
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\bin\Debug\net9.0\appsettings.json
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\bin\Debug\net9.0\ApiVendasHardware.staticwebassets.runtime.json
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\bin\Debug\net9.0\ApiVendasHardware.staticwebassets.endpoints.json
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\bin\Debug\net9.0\ApiVendasHardware.exe
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\bin\Debug\net9.0\ApiVendasHardware.deps.json
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\bin\Debug\net9.0\ApiVendasHardware.runtimeconfig.json
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\bin\Debug\net9.0\ApiVendasHardware.dll
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\bin\Debug\net9.0\ApiVendasHardware.pdb
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\ApiVendasHardware.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\ApiVendasHardware.AssemblyInfoInputs.cache
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\ApiVendasHardware.AssemblyInfo.cs
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\ApiVendasHardware.csproj.CoreCompileInputs.cache
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\ApiVendasHardware.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\ApiVendasHardware.sourcelink.json
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\scopedcss\bundle\ApiVendasHardware.styles.css
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\compressed\ravwiihkrz-xrhzbo0lwu.gz
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\staticwebassets.build.json.cache
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\ApiVendasHardware.dll
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\refint\ApiVendasHardware.dll
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\ApiVendasHardware.pdb
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\ApiVendasHardware.genruntimeconfig.cache
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\ref\ApiVendasHardware.dll
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\compressed\iqgcmdxm4f-u4veoc3f2y.gz
+C:\Users\u300911\Downloads\teste\HardcoreVendasHardware (1)\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\compressed\0yggp6rw2v-0v6m0uizlh.gz
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\bin\Debug\net9.0\appsettings.json
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\bin\Debug\net9.0\ApiVendasHardware.staticwebassets.runtime.json
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\bin\Debug\net9.0\ApiVendasHardware.staticwebassets.endpoints.json
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\bin\Debug\net9.0\ApiVendasHardware.exe
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\bin\Debug\net9.0\ApiVendasHardware.deps.json
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\bin\Debug\net9.0\ApiVendasHardware.runtimeconfig.json
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\bin\Debug\net9.0\ApiVendasHardware.dll
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\bin\Debug\net9.0\ApiVendasHardware.pdb
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\ApiVendasHardware.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\ApiVendasHardware.AssemblyInfoInputs.cache
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\ApiVendasHardware.AssemblyInfo.cs
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\ApiVendasHardware.csproj.CoreCompileInputs.cache
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\ApiVendasHardware.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\ApiVendasHardware.sourcelink.json
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\scopedcss\bundle\ApiVendasHardware.styles.css
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\compressed\iqgcmdxm4f-u4veoc3f2y.gz
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\compressed\0yggp6rw2v-0v6m0uizlh.gz
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\compressed\ravwiihkrz-xrhzbo0lwu.gz
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\staticwebassets.build.json.cache
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\ApiVendasHardware.dll
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\refint\ApiVendasHardware.dll
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\ApiVendasHardware.pdb
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\ApiVendasHardware.genruntimeconfig.cache
+C:\Users\u301342\Desktop\HardcoreVendasHardware\HardcoreVendasHardware\HardcoreVendasHardware\obj\Debug\net9.0\ref\ApiVendasHardware.dll
