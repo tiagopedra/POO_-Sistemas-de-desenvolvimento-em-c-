@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contract Flow – Dashboard</title>
+
+  <!-- Biblioteca de ícones Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Fonte do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Nosso arquivo de estilos -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- BARRA LATERAL (menu de navegação) -->
+<aside class="barra-lateral">
+
+  <!-- Logo da empresa -->
+  <div class="logo-area">
+    <span class="logo-sigla">CF</span>
+    <span class="logo-nome">Contract<strong>Flow</strong></span>
+  </div>
+
+  <!-- Links de navegação -->
+  <nav class="menu-navegacao">
+    <a href="#" class="item-menu ativo">
+      <i class="fa-solid fa-house"></i>
+      Dashboard
+    </a>
+    <a href="#" class="item-menu">
+      <i class="fa-solid fa-file-contract"></i>
+      Contratos
+    </a>
+    <a href="#" class="item-menu">
+      <i class="fa-solid fa-clock"></i>
+      Vencimentos
+    </a>
+    <a href="#" class="item-menu">
+      <i class="fa-solid fa-building"></i>
+      Empresas
+    </a>
+    <a href="#" class="item-menu">
+      <i class="fa-solid fa-chart-bar"></i>
+      Relatórios
+    </a>
+  </nav>
+
+  <!-- Informações do usuário logado -->
+  <div class="area-usuario">
+    <div class="avatar-usuario">TS</div>
+    <div class="info-usuario">
+      <span class="nome-usuario">Talita Souza</span>
+      <span class="cargo-usuario">Administradora</span>
+    </div>
+  </div>
+
+</aside>
+
+
+<!-- CONTEÚDO PRINCIPAL DA PÁGINA -->
+<main class="conteudo-principal">
+
+  <!-- Barra do topo com título e botão -->
+  <header class="barra-topo">
+    <div class="titulo-area">
+      <h1 class="titulo-pagina">Dashboard</h1>
+      <p class="subtitulo-pagina">Acompanhe e gerencie todos os contratos da empresa.</p>
+    </div>
+    <div class="acoes-topo">
+      <button class="botao-icone" id="btnNotificacoes" title="Notificações">
+        <i class="fa-solid fa-bell"></i>
+        <span class="contador-notificacoes">3</span>
+      </button>
+      <button class="botao-primario" id="btnNovoContrato">
+        <i class="fa-solid fa-plus"></i>
+        Novo contrato
+      </button>
+    </div>
+  </header>
+
+
+  <!-- Cartões com os indicadores principais (KPIs) -->
+  <section class="grade-indicadores">
+
+    <div class="cartao-indicador indicador-total">
+      <div class="corpo-indicador">
+        <span class="rotulo-indicador">Total de contratos</span>
+        <span class="numero-indicador" id="totalContratos">–</span>
+        <span class="descricao-indicador">Todos os contratos cadastrados</span>
+      </div>
+      <div class="icone-indicador">
+        <i class="fa-solid fa-file-lines"></i>
+      </div>
+    </div>
+
+    <div class="cartao-indicador indicador-ativos">
+      <div class="corpo-indicador">
+        <span class="rotulo-indicador">Contratos ativos</span>
+        <span class="numero-indicador" id="totalAtivos">–</span>
+        <span class="descricao-indicador">Contratos em andamento</span>
+      </div>
+      <div class="icone-indicador">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+    </div>
+
+    <div class="cartao-indicador indicador-perto">
+      <div class="corpo-indicador">
+        <span class="rotulo-indicador">Perto de vencer</span>
+        <span class="numero-indicador" id="totalPerto">–</span>
+        <span class="descricao-indicador">Vencem em até 7 dias</span>
+      </div>
+      <div class="icone-indicador">
+        <i class="fa-solid fa-clock"></i>
+      </div>
+    </div>
+
+    <div class="cartao-indicador indicador-vencidos">
+      <div class="corpo-indicador">
+        <span class="rotulo-indicador">Vencidos</span>
+        <span class="numero-indicador" id="totalVencidos">–</span>
+        <span class="descricao-indicador">Contratos já vencidos</span>
+      </div>
+      <div class="icone-indicador">
+        <i class="fa-solid fa-circle-xmark"></i>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- Barra de filtros e busca -->
+  <section class="barra-filtros">
+
+    <div class="campo-busca">
+      <i class="fa-solid fa-magnifying-glass icone-busca"></i>
+      <input type="text" id="campoBusca" class="input-busca" placeholder="Buscar por empresa, contrato ou responsável…" />
+    </div>
+
+    <div class="grupo-filtro">
+      <label class="rotulo-filtro">Filtrar por status:</label>
+      <select id="filtroStatus" class="selecao-filtro">
+        <option value="">Todos</option>
+        <option value="Ativo">Ativo</option>
+        <option value="PertoDeVencer">Perto de vencer</option>
+        <option value="Vencido">Vencido</option>
+      </select>
+    </div>
+
+    <div class="grupo-filtro">
+      <label class="rotulo-filtro">Período de validade:</label>
+      <select id="filtroPeriodo" class="selecao-filtro">
+        <option value="">Todos</option>
+        <option value="7">Próximos 7 dias</option>
+        <option value="30">Próximos 30 dias</option>
+        <option value="90">Próximos 90 dias</option>
+      </select>
+    </div>
+
+    <button class="botao-secundario" id="btnLimparFiltros">
+      <i class="fa-solid fa-rotate-right"></i>
+      Limpar filtros
+    </button>
+
+  </section>
+
+
+  <!-- Tabela de contratos -->
+  <section class="secao-tabela">
+
+    <div class="cabecalho-tabela">
+      <span class="contagem-registros" id="contagemRegistros">Carregando…</span>
+      <button class="botao-secundario botao-pequeno" id="btnAtualizar">
+        <i class="fa-solid fa-arrows-rotate"></i>
+        Atualizar
+      </button>
+    </div>
+
+    <div class="area-tabela">
+      <table class="tabela-contratos" id="tabelaContratos">
+        <thead>
+          <tr>
+            <th>Empresa</th>
+            <th>Contrato</th>
+            <th>Responsável</th>
+            <th>Valor</th>
+            <TH>Tipo</TH>
+            <th>Início</th>
+            <th>Validade</th>
+            <th>Dias p/ vencer</th>
+            <th>Status</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="corpoTabela">
+          <!-- Linhas de carregamento (aparecem enquanto busca os dados) -->
+          <tr class="linha-carregando"><td colspan="10"><div class="animacao-carregamento"></div></td></tr>
+          <tr class="linha-carregando"><td colspan="10"><div class="animacao-carregamento"></div></td></tr>
+          <tr class="linha-carregando"><td colspan="10"><div class="animacao-carregamento"></div></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Rodapé da tabela com paginação -->
+    <div class="rodape-tabela">
+      <span class="info-pagina" id="infoPagina"></span>
+      <div class="paginacao" id="paginacao"></div>
+    </div>
+
+  </section>
+
+
+  <!-- Área de exportação de relatório -->
+  <section class="area-exportacao">
+    <div class="cartao-exportacao">
+
+      <div class="info-exportacao">
+        <div class="icone-exportacao">
+          <i class="fa-solid fa-download"></i>
+        </div>
+        <div>
+          <h3 class="titulo-exportacao">Exportar relatório</h3>
+          <p class="descricao-exportacao">Gere um relatório completo com todos os dados filtrados atualmente.</p>
+        </div>
+      </div>
+
+      <div class="botoes-exportacao">
+        <button class="botao-exportar botao-csv" id="btnExportarCSV">
+          <i class="fa-solid fa-file-csv"></i>
+          Exportar CSV
+        </button>
+        <button class="botao-exportar botao-json" id="btnExportarJSON">
+          <i class="fa-solid fa-code"></i>
+          Exportar JSON
+        </button>
+        <button class="botao-exportar botao-imprimir" id="btnImprimir">
+          <i class="fa-solid fa-print"></i>
+          Imprimir
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+
+<!-- JANELA FLUTUANTE: NOVO / EDITAR CONTRATO -->
+<div class="fundo-janela" id="fundoJanela">
+  <div class="janela" id="janela">
+
+    <div class="cabecalho-janela">
+      <h2 class="titulo-janela" id="tituloJanela">Novo contrato</h2>
+      <button class="botao-fechar-janela" id="btnFecharJanela">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <form class="formulario" id="formularioContrato" novalidate>
+      <input type="hidden" id="campoId" />
+
+      <div class="linha-formulario">
+        <div class="grupo-campo">
+          <label class="rotulo-campo">Empresa <span class="obrigatorio">*</span></label>
+          <input type="text" id="campoEmpresa" class="campo-input" placeholder="Nome da empresa" required />
+        </div>
+        <div class="grupo-campo">
+          <label class="rotulo-campo">Nome do contrato <span class="obrigatorio">*</span></label>
+          <input type="text" id="campoNome" class="campo-input" placeholder="Ex: Contrato de suporte técnico" required />
+        </div>
+      </div>
+
+      <div class="linha-formulario">
+  <div class="grupo-campo">
+    <label class="rotulo-campo">Valor (R$) <span class="obrigatorio">*</span></label>
+    <input type="number" id="campoValor" class="campo-input" placeholder="Ex: 2500.00" step="0.01" min="0" required />
+  </div>
+
+  <div class="grupo-campo">
+    <label class="rotulo-campo">Tipo financeiro <span class="obrigatorio">*</span></label>
+    <select id="campoTipoFinanceiro" class="campo-input" required>
+      <option value="Entrada">Entrada</option>
+      <option value="Saida">Saída</option>
+    </select>
+  </div>
+</div>
+
+<div class="linha-formulario">
+  <div class="grupo-campo">
+    <label class="rotulo-campo">Responsável <span class="obrigatorio">*</span></label>
+    <input type="text" id="campoResponsavel" class="campo-input" placeholder="Nome do responsável" required />
+  </div>
+</div>
+
+      <div class="linha-formulario">
+        <div class="grupo-campo">
+          <label class="rotulo-campo">Data de início <span class="obrigatorio">*</span></label>
+          <input type="date" id="campoInicio" class="campo-input" required />
+        </div>
+        <div class="grupo-campo">
+          <label class="rotulo-campo">Validade <span class="obrigatorio">*</span></label>
+          <input type="date" id="campoValidade" class="campo-input" required />
+        </div>
+      </div>
+
+      <div class="aviso-info">
+        <i class="fa-solid fa-circle-info"></i>
+        O status do contrato é calculado automaticamente com base na data de validade.
+      </div>
+
+      <div class="acoes-formulario">
+        <button type="button" class="botao-secundario" id="btnCancelar">Cancelar</button>
+        <button type="submit" class="botao-primario" id="btnSalvar">Salvar contrato</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+
+<!-- JANELA FLUTUANTE: VISUALIZAR CONTRATO -->
+<div class="fundo-janela" id="fundoVisualizacao">
+  <div class="janela janela-visualizacao" id="janelaVisualizacao">
+
+    <div class="cabecalho-janela">
+      <h2 class="titulo-janela" id="tituloVisualizacao">Detalhes do contrato</h2>
+      <button class="botao-fechar-janela" id="btnFecharVisualizacao">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="grade-detalhes" id="gradeDetalhes"></div>
+
+    <div class="acoes-formulario">
+      <button class="botao-secundario" id="btnFecharDetalhes">Fechar</button>
+      <button class="botao-primario" id="btnEditarDoDetalhes">
+        <i class="fa-solid fa-pen"></i>
+        Editar contrato
+      </button>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Área onde as mensagens de confirmação aparecem (canto inferior direito) -->
+<div class="area-mensagens" id="areaMensagens"></div>
+
+
+<!-- Painel informativo de funcionalidade futura -->
+<div class="fundo-painel-info" id="fundoPainelInfo">
+  <div class="painel-info" id="painelInfo">
+    <div class="painel-info-cabecalho">
+      <div class="painel-info-icone" id="painelInfoIcone">
+        <i class="fa-solid fa-rocket"></i>
+      </div>
+      <button class="botao-fechar-janela" id="btnFecharPainelInfo">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <h3 class="painel-info-titulo" id="painelInfoTitulo">Funcionalidade em desenvolvimento</h3>
+    <p class="painel-info-descricao" id="painelInfoDescricao"></p>
+    <ul class="painel-info-lista" id="painelInfoLista"></ul>
+    <div class="painel-info-badge">
+      <i class="fa-solid fa-clock"></i>
+      Disponivel em breve
+    </div>
+    <button class="botao-primario painel-info-botao" id="btnFecharPainelInfoOk">
+      Entendido!
+    </button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+<!-- SERÁ ADICIONADO VIA PATCH -->
