@@ -1,0 +1,160 @@
+@API_BARBEARIA_HostAddress = http://localhost:5000
+
+# ============================================================
+# API_CONTRATOS.http — Contratos de requisição HTTP
+# Sistema de Gestão — BarberPro
+# ============================================================
+
+
+### ══════════════════════════════════════════
+### AGENDAMENTOS
+### ══════════════════════════════════════════
+
+### GET — Lista todos os agendamentos
+GET {{API_BARBEARIA_HostAddress}}/api/agendamentos
+Accept: application/json
+
+###
+
+### GET — Retorna um agendamento pelo ID
+GET {{API_BARBEARIA_HostAddress}}/api/agendamentos/1
+Accept: application/json
+
+###
+
+### POST — Cria um novo agendamento
+POST {{API_BARBEARIA_HostAddress}}/api/agendamentos
+Content-Type: application/json
+
+{
+  "cliente": "Carlos Silva",
+  "servico": "Corte Degradê",
+  "data": "2026-06-10",
+  "horario": "09:00",
+  "observacao": "Prefere tesoura"
+}
+
+###
+
+### PUT — Atualiza um agendamento existente
+PUT {{API_BARBEARIA_HostAddress}}/api/agendamentos/1
+Content-Type: application/json
+
+{
+  "cliente": "Carlos Silva",
+  "servico": "Corte Social",
+  "data": "2026-06-11",
+  "horario": "10:00",
+  "observacao": "Cliente VIP"
+}
+
+###
+
+### DELETE — Remove um agendamento pelo ID
+DELETE {{API_BARBEARIA_HostAddress}}/api/agendamentos/1
+Accept: application/json
+
+###
+
+
+### ══════════════════════════════════════════
+### PRODUTOS / SERVIÇOS
+### ══════════════════════════════════════════
+
+### GET — Lista todos os produtos e serviços
+GET {{API_BARBEARIA_HostAddress}}/api/produtos
+Accept: application/json
+
+###
+
+### GET — Retorna um produto pelo ID
+GET {{API_BARBEARIA_HostAddress}}/api/produtos/1
+Accept: application/json
+
+###
+
+### POST — Cadastra um novo produto/serviço
+POST {{API_BARBEARIA_HostAddress}}/api/produtos
+Content-Type: application/json
+
+{
+  "nome": "Corte Degradê",
+  "descricao": "Degradê progressivo nas laterais com finalização no topo",
+  "preco": 45.00
+}
+
+###
+
+### PUT — Atualiza um produto/serviço existente
+PUT {{API_BARBEARIA_HostAddress}}/api/produtos/1
+Content-Type: application/json
+
+{
+  "nome": "Corte Degradê Premium",
+  "descricao": "Degradê progressivo com acabamento refinado",
+  "preco": 55.00
+}
+
+###
+
+### DELETE — Remove um produto/serviço pelo ID
+DELETE {{API_BARBEARIA_HostAddress}}/api/produtos/1
+Accept: application/json
+
+###
+
+
+### ══════════════════════════════════════════
+### DESPESAS
+### ══════════════════════════════════════════
+
+### GET — Lista todas as despesas
+GET {{API_BARBEARIA_HostAddress}}/api/despesas
+Accept: application/json
+
+###
+
+### GET — Retorna uma despesa pelo ID
+GET {{API_BARBEARIA_HostAddress}}/api/despesas/1
+Accept: application/json
+
+###
+
+### POST — Cadastra uma nova despesa
+POST {{API_BARBEARIA_HostAddress}}/api/despesas
+Content-Type: application/json
+
+{
+  "descricao": "Aluguel do espaço",
+  "valor": 1500.00
+}
+
+###
+
+### PUT — Atualiza uma despesa existente
+PUT {{API_BARBEARIA_HostAddress}}/api/despesas/1
+Content-Type: application/json
+
+{
+  "descricao": "Aluguel do espaço (reajuste)",
+  "valor": 1650.00
+}
+
+###
+
+### DELETE — Remove uma despesa pelo ID
+DELETE {{API_BARBEARIA_HostAddress}}/api/despesas/1
+Accept: application/json
+
+###
+
+
+### ══════════════════════════════════════════
+### FINANCEIRO
+### ══════════════════════════════════════════
+
+### GET — Retorna o resumo financeiro (receitas, despesas e lucro)
+GET {{API_BARBEARIA_HostAddress}}/api/financeiro
+Accept: application/json
+
+###

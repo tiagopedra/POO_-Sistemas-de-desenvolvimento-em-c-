@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BarberPro — Sistema de Gestão</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== SIDEBAR ========== -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <span class="logo-icon">✂</span>
+      <div>
+        <div class="logo-nome">BarberPro</div>
+        <div class="logo-sub">Sistema de Gestão</div>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <button class="nav-item ativo" onclick="mostrarAba('agendamentos', this)">
+        <span class="nav-icon">📅</span>
+        <span>Agendamentos</span>
+      </button>
+      <button class="nav-item" onclick="mostrarAba('servicos', this)">
+        <span class="nav-icon">✂️</span>
+        <span>Serviços</span>
+      </button>
+      <button class="nav-item" onclick="mostrarAba('financeiro', this)">
+        <span class="nav-icon">💰</span>
+        <span>Financeiro</span>
+      </button>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="api-badge">API HTTP · localhost:5000</div>
+    </div>
+  </aside>
+
+  <!-- ========== CONTEÚDO PRINCIPAL ========== -->
+  <main class="conteudo">
+
+    <!-- Agendamentos -->
+    <section id="secao-agendamentos">
+      <div class="page-header">
+        <div>
+          <h1 class="page-titulo">Agendamentos</h1>
+          <p class="page-sub">Gerencie os atendimentos da barbearia</p>
+        </div>
+        <button class="btn-primary" onclick="abrirNovo()">+ Novo Agendamento</button>
+      </div>
+
+      <div class="card-tabela">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Cliente</th>
+              <th>Serviço</th>
+              <th>Data</th>
+              <th>Horário</th>
+              <th>Observação</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-agendamentos">
+            <tr><td colspan="7" class="carregando">Carregando...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="secao-servicos" style="display:none">
+      <div class="page-header">
+        <div>
+          <h1 class="page-titulo">Serviços</h1>
+          <p class="page-sub">Catálogo de serviços e preços</p>
+        </div>
+        <button class="btn-primary" onclick="abrirNovoServico()">+ Novo Serviço</button>
+      </div>
+
+      <div class="card-tabela">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Descrição</th>
+              <th>Preço</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-servicos">
+            <tr><td colspan="5" class="carregando">Carregando...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Financeiro -->
+    <section id="secao-financeiro" style="display:none">
+      <div class="page-header">
+        <div>
+          <h1 class="page-titulo">Financeiro</h1>
+          <p class="page-sub">Resumo de receitas, despesas e lucro</p>
+        </div>
+        <button class="btn-primary" onclick="abrirNovaDespesa()">+ Nova Despesa</button>
+      </div>
+
+      <div class="cards-financeiro">
+        <div class="card-fin verde">
+          <div class="card-fin-icone">💰</div>
+          <div class="card-fin-info">
+            <div class="card-fin-label">Total Receitas</div>
+            <div class="card-fin-valor" id="fin-receitas">R$ 0,00</div>
+            <div class="card-fin-sub" id="fin-receitas-sub"></div>
+          </div>
+        </div>
+        <div class="card-fin vermelho">
+          <div class="card-fin-icone">📉</div>
+          <div class="card-fin-info">
+            <div class="card-fin-label">Total Despesas</div>
+            <div class="card-fin-valor" id="fin-despesas">R$ 0,00</div>
+          </div>
+        </div>
+        <div class="card-fin azul">
+          <div class="card-fin-icone">📈</div>
+          <div class="card-fin-info">
+            <div class="card-fin-label">Lucro Líquido</div>
+            <div class="card-fin-valor" id="fin-lucro">R$ 0,00</div>
+            <div class="card-fin-sub" id="fin-situacao"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tabelas-financeiro">
+        <div class="box-tabela">
+          <h3 class="box-titulo">📋 Receitas por Serviço</h3>
+          <table>
+            <thead><tr><th>Serviço</th><th class="direita">Valor</th></tr></thead>
+            <tbody id="tabela-receitas"></tbody>
+          </table>
+        </div>
+        <div class="box-tabela">
+          <h3 class="box-titulo">🧾 Despesas Fixas</h3>
+          <table>
+            <thead><tr><th>Descrição</th><th class="direita">Valor</th><th></th></tr></thead>
+            <tbody id="tabela-despesas"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== MODAL AGENDAMENTO ========== -->
+  <div class="modal-fundo" id="modal-agendamento">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="modal-titulo">Novo Agendamento</h3>
+        <button class="modal-fechar" onclick="fecharModal()">✕</button>
+      </div>
+      <div class="campo">
+        <label>Cliente</label>
+        <input type="text" id="campo-cliente" placeholder="Nome do cliente" />
+      </div>
+      <div class="campo">
+        <label>Serviço</label>
+        <select id="campo-servico"></select>
+      </div>
+      <div class="campos-linha">
+        <div class="campo">
+          <label>Data</label>
+          <input type="date" id="campo-data" />
+        </div>
+        <div class="campo">
+          <label>Horário</label>
+          <input type="time" id="campo-horario" />
+        </div>
+      </div>
+      <div class="campo">
+        <label>Observação</label>
+        <textarea id="campo-obs" placeholder="Ex: prefere tesoura, alérgico..."></textarea>
+      </div>
+      <div class="modal-botoes">
+        <button class="btn-cancelar" onclick="fecharModal()">Cancelar</button>
+        <button class="btn-salvar" onclick="salvar()">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== MODAL SERVIÇO ========== -->
+  <div class="modal-fundo" id="modal-servico">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="modal-servico-titulo">Novo Serviço</h3>
+        <button class="modal-fechar" onclick="fecharModalServico()">✕</button>
+      </div>
+      <div class="campo">
+        <label>Nome do Serviço</label>
+        <input type="text" id="campo-nome" placeholder="Ex: Corte Degradê" />
+      </div>
+      <div class="campo">
+        <label>Descrição</label>
+        <textarea id="campo-desc" placeholder="Descreva o serviço..."></textarea>
+      </div>
+      <div class="campo">
+        <label>Preço (R$)</label>
+        <input type="number" id="campo-preco" placeholder="0.00" step="0.01" min="0" />
+      </div>
+      <div class="modal-botoes">
+        <button class="btn-cancelar" onclick="fecharModalServico()">Cancelar</button>
+        <button class="btn-salvar" onclick="salvarServico()">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== MODAL DESPESA ========== -->
+  <div class="modal-fundo" id="modal-despesa">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="modal-despesa-titulo">Nova Despesa</h3>
+        <button class="modal-fechar" onclick="fecharModalDespesa()">✕</button>
+      </div>
+      <div class="campo">
+        <label>Descrição</label>
+        <input type="text" id="campo-desp-desc" placeholder="Ex: Aluguel, Energia elétrica..." />
+      </div>
+      <div class="campo">
+        <label>Valor (R$)</label>
+        <input type="number" id="campo-desp-valor" placeholder="0.00" step="0.01" min="0" />
+      </div>
+      <div class="modal-botoes">
+        <button class="btn-cancelar" onclick="fecharModalDespesa()">Cancelar</button>
+        <button class="btn-salvar" onclick="salvarDespesa()">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast de feedback -->
+  <div id="toast" class="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
