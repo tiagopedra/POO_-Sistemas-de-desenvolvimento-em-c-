@@ -188,10 +188,10 @@ O frontend é composto por três arquivos na pasta `wwwroot/`:
 
 Desenvolvido como trabalho acadêmico na disciplina de **Programação Orientada a Objetos**
 
-**FESP-PR — Análise e Desenvolvimento de Sistemas — 2026**
+**FESP-PR — Sistemas de Informação — 2026**
 
 | Nome | Responsabilidade |
 |---|---|
 | Christopher | API REST em C# |
 | Matheus | Frontend e integração |
-| Talita | — |
+| Talita | Documentação |
