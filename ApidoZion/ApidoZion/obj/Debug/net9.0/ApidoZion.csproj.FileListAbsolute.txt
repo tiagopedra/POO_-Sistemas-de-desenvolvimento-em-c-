@@ -1,0 +1,149 @@
+C:/Users/savio/Desktop/ApidoZion/ApidoZion/bin/Debug/net9.0/ApidoZion.staticwebassets.endpoints.json
+C:/Users/savio/Desktop/ApidoZion/ApidoZion/bin/Debug/net9.0/ApidoZion.exe
+C:/Users/savio/Desktop/ApidoZion/ApidoZion/bin/Debug/net9.0/ApidoZion.deps.json
+C:/Users/savio/Desktop/ApidoZion/ApidoZion/bin/Debug/net9.0/ApidoZion.runtimeconfig.json
+C:/Users/savio/Desktop/ApidoZion/ApidoZion/bin/Debug/net9.0/ApidoZion.dll
+C:/Users/savio/Desktop/ApidoZion/ApidoZion/bin/Debug/net9.0/ApidoZion.pdb
+C:/Users/savio/Desktop/ApidoZion/ApidoZion/obj/Debug/net9.0/rpswa.dswa.cache.json
+C:/Users/savio/Desktop/ApidoZion/ApidoZion/obj/Debug/net9.0/ApidoZion.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/savio/Desktop/ApidoZion/ApidoZion/obj/Debug/net9.0/ApidoZion.AssemblyInfoInputs.cache
+C:/Users/savio/Desktop/ApidoZion/ApidoZion/obj/Debug/net9.0/ApidoZion.AssemblyInfo.cs
+C:/Users/savio/Desktop/ApidoZion/ApidoZion/obj/Debug/net9.0/ApidoZion.csproj.CoreCompileInputs.cache
+C:/Users/savio/Desktop/ApidoZion/ApidoZion/obj/Debug/net9.0/ApidoZion.MvcApplicationPartsAssemblyInfo.cache
+C:/Users/savio/Desktop/ApidoZion/ApidoZion/obj/Debug/net9.0/rjimswa.dswa.cache.json
+C:/Users/savio/Desktop/ApidoZion/ApidoZion/obj/Debug/net9.0/rjsmrazor.dswa.cache.json
+C:/Users/savio/Desktop/ApidoZion/ApidoZion/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json
+C:/Users/savio/Desktop/ApidoZion/ApidoZion/obj/Debug/net9.0/scopedcss/bundle/ApidoZion.styles.css
+C:/Users/savio/Desktop/ApidoZion/ApidoZion/obj/Debug/net9.0/staticwebassets.build.json
+C:/Users/savio/Desktop/ApidoZion/ApidoZion/obj/Debug/net9.0/staticwebassets.build.json.cache
+C:/Users/savio/Desktop/ApidoZion/ApidoZion/obj/Debug/net9.0/staticwebassets.development.json
+C:/Users/savio/Desktop/ApidoZion/ApidoZion/obj/Debug/net9.0/staticwebassets.build.endpoints.json
+C:/Users/savio/Desktop/ApidoZion/ApidoZion/obj/Debug/net9.0/swae.build.ex.cache
+C:/Users/savio/Desktop/ApidoZion/ApidoZion/obj/Debug/net9.0/ApidoZion.dll
+C:/Users/savio/Desktop/ApidoZion/ApidoZion/obj/Debug/net9.0/refint/ApidoZion.dll
+C:/Users/savio/Desktop/ApidoZion/ApidoZion/obj/Debug/net9.0/ApidoZion.pdb
+C:/Users/savio/Desktop/ApidoZion/ApidoZion/obj/Debug/net9.0/ApidoZion.genruntimeconfig.cache
+C:/Users/savio/Desktop/ApidoZion/ApidoZion/obj/Debug/net9.0/ref/ApidoZion.dll
+C:/Users/u301209/Downloads/ApidoZion/bin/Debug/net9.0/appsettings.Development.json
+C:/Users/u301209/Downloads/ApidoZion/bin/Debug/net9.0/appsettings.json
+C:/Users/u301209/Downloads/ApidoZion/bin/Debug/net9.0/ApidoZion.staticwebassets.endpoints.json
+C:/Users/u301209/Downloads/ApidoZion/bin/Debug/net9.0/ApidoZion.exe
+C:/Users/u301209/Downloads/ApidoZion/bin/Debug/net9.0/ApidoZion.deps.json
+C:/Users/u301209/Downloads/ApidoZion/bin/Debug/net9.0/ApidoZion.runtimeconfig.json
+C:/Users/u301209/Downloads/ApidoZion/bin/Debug/net9.0/ApidoZion.dll
+C:/Users/u301209/Downloads/ApidoZion/bin/Debug/net9.0/ApidoZion.pdb
+C:/Users/u301209/Downloads/ApidoZion/obj/Debug/net9.0/rpswa.dswa.cache.json
+C:/Users/u301209/Downloads/ApidoZion/obj/Debug/net9.0/ApidoZion.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/u301209/Downloads/ApidoZion/obj/Debug/net9.0/ApidoZion.AssemblyInfoInputs.cache
+C:/Users/u301209/Downloads/ApidoZion/obj/Debug/net9.0/ApidoZion.AssemblyInfo.cs
+C:/Users/u301209/Downloads/ApidoZion/obj/Debug/net9.0/ApidoZion.csproj.CoreCompileInputs.cache
+C:/Users/u301209/Downloads/ApidoZion/obj/Debug/net9.0/ApidoZion.MvcApplicationPartsAssemblyInfo.cache
+C:/Users/u301209/Downloads/ApidoZion/obj/Debug/net9.0/rjimswa.dswa.cache.json
+C:/Users/u301209/Downloads/ApidoZion/obj/Debug/net9.0/rjsmrazor.dswa.cache.json
+C:/Users/u301209/Downloads/ApidoZion/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json
+C:/Users/u301209/Downloads/ApidoZion/obj/Debug/net9.0/scopedcss/bundle/ApidoZion.styles.css
+C:/Users/u301209/Downloads/ApidoZion/obj/Debug/net9.0/staticwebassets.build.json
+C:/Users/u301209/Downloads/ApidoZion/obj/Debug/net9.0/staticwebassets.build.json.cache
+C:/Users/u301209/Downloads/ApidoZion/obj/Debug/net9.0/staticwebassets.development.json
+C:/Users/u301209/Downloads/ApidoZion/obj/Debug/net9.0/staticwebassets.build.endpoints.json
+C:/Users/u301209/Downloads/ApidoZion/obj/Debug/net9.0/ApidoZion.dll
+C:/Users/u301209/Downloads/ApidoZion/obj/Debug/net9.0/refint/ApidoZion.dll
+C:/Users/u301209/Downloads/ApidoZion/obj/Debug/net9.0/ApidoZion.pdb
+C:/Users/u301209/Downloads/ApidoZion/obj/Debug/net9.0/ApidoZion.genruntimeconfig.cache
+C:/Users/u301209/Downloads/ApidoZion/obj/Debug/net9.0/ref/ApidoZion.dll
+/Users/tiagopedra/Documents/1 - DOCÊNCIA/2 - FESP PR/Disciplinas/Programação orientada por objetos/PRIMEIRA PARTE - TRABALHO /Sávio, Vitor Castilho e Renan 3° /ApidoZion/bin/Debug/net9.0/appsettings.Development.json
+/Users/tiagopedra/Documents/1 - DOCÊNCIA/2 - FESP PR/Disciplinas/Programação orientada por objetos/PRIMEIRA PARTE - TRABALHO /Sávio, Vitor Castilho e Renan 3° /ApidoZion/bin/Debug/net9.0/appsettings.json
+/Users/tiagopedra/Documents/1 - DOCÊNCIA/2 - FESP PR/Disciplinas/Programação orientada por objetos/PRIMEIRA PARTE - TRABALHO /Sávio, Vitor Castilho e Renan 3° /ApidoZion/bin/Debug/net9.0/ApidoZion.staticwebassets.endpoints.json
+/Users/tiagopedra/Documents/1 - DOCÊNCIA/2 - FESP PR/Disciplinas/Programação orientada por objetos/PRIMEIRA PARTE - TRABALHO /Sávio, Vitor Castilho e Renan 3° /ApidoZion/bin/Debug/net9.0/ApidoZion
+/Users/tiagopedra/Documents/1 - DOCÊNCIA/2 - FESP PR/Disciplinas/Programação orientada por objetos/PRIMEIRA PARTE - TRABALHO /Sávio, Vitor Castilho e Renan 3° /ApidoZion/bin/Debug/net9.0/ApidoZion.deps.json
+/Users/tiagopedra/Documents/1 - DOCÊNCIA/2 - FESP PR/Disciplinas/Programação orientada por objetos/PRIMEIRA PARTE - TRABALHO /Sávio, Vitor Castilho e Renan 3° /ApidoZion/bin/Debug/net9.0/ApidoZion.runtimeconfig.json
+/Users/tiagopedra/Documents/1 - DOCÊNCIA/2 - FESP PR/Disciplinas/Programação orientada por objetos/PRIMEIRA PARTE - TRABALHO /Sávio, Vitor Castilho e Renan 3° /ApidoZion/bin/Debug/net9.0/ApidoZion.dll
+/Users/tiagopedra/Documents/1 - DOCÊNCIA/2 - FESP PR/Disciplinas/Programação orientada por objetos/PRIMEIRA PARTE - TRABALHO /Sávio, Vitor Castilho e Renan 3° /ApidoZion/bin/Debug/net9.0/ApidoZion.pdb
+/Users/tiagopedra/Documents/1 - DOCÊNCIA/2 - FESP PR/Disciplinas/Programação orientada por objetos/PRIMEIRA PARTE - TRABALHO /Sávio, Vitor Castilho e Renan 3° /ApidoZion/obj/Debug/net9.0/rpswa.dswa.cache.json
+/Users/tiagopedra/Documents/1 - DOCÊNCIA/2 - FESP PR/Disciplinas/Programação orientada por objetos/PRIMEIRA PARTE - TRABALHO /Sávio, Vitor Castilho e Renan 3° /ApidoZion/obj/Debug/net9.0/ApidoZion.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tiagopedra/Documents/1 - DOCÊNCIA/2 - FESP PR/Disciplinas/Programação orientada por objetos/PRIMEIRA PARTE - TRABALHO /Sávio, Vitor Castilho e Renan 3° /ApidoZion/obj/Debug/net9.0/ApidoZion.AssemblyInfoInputs.cache
+/Users/tiagopedra/Documents/1 - DOCÊNCIA/2 - FESP PR/Disciplinas/Programação orientada por objetos/PRIMEIRA PARTE - TRABALHO /Sávio, Vitor Castilho e Renan 3° /ApidoZion/obj/Debug/net9.0/ApidoZion.AssemblyInfo.cs
+/Users/tiagopedra/Documents/1 - DOCÊNCIA/2 - FESP PR/Disciplinas/Programação orientada por objetos/PRIMEIRA PARTE - TRABALHO /Sávio, Vitor Castilho e Renan 3° /ApidoZion/obj/Debug/net9.0/ApidoZion.csproj.CoreCompileInputs.cache
+/Users/tiagopedra/Documents/1 - DOCÊNCIA/2 - FESP PR/Disciplinas/Programação orientada por objetos/PRIMEIRA PARTE - TRABALHO /Sávio, Vitor Castilho e Renan 3° /ApidoZion/obj/Debug/net9.0/ApidoZion.MvcApplicationPartsAssemblyInfo.cache
+/Users/tiagopedra/Documents/1 - DOCÊNCIA/2 - FESP PR/Disciplinas/Programação orientada por objetos/PRIMEIRA PARTE - TRABALHO /Sávio, Vitor Castilho e Renan 3° /ApidoZion/obj/Debug/net9.0/ApidoZion.sourcelink.json
+/Users/tiagopedra/Documents/1 - DOCÊNCIA/2 - FESP PR/Disciplinas/Programação orientada por objetos/PRIMEIRA PARTE - TRABALHO /Sávio, Vitor Castilho e Renan 3° /ApidoZion/obj/Debug/net9.0/rjimswa.dswa.cache.json
+/Users/tiagopedra/Documents/1 - DOCÊNCIA/2 - FESP PR/Disciplinas/Programação orientada por objetos/PRIMEIRA PARTE - TRABALHO /Sávio, Vitor Castilho e Renan 3° /ApidoZion/obj/Debug/net9.0/rjsmrazor.dswa.cache.json
+/Users/tiagopedra/Documents/1 - DOCÊNCIA/2 - FESP PR/Disciplinas/Programação orientada por objetos/PRIMEIRA PARTE - TRABALHO /Sávio, Vitor Castilho e Renan 3° /ApidoZion/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json
+/Users/tiagopedra/Documents/1 - DOCÊNCIA/2 - FESP PR/Disciplinas/Programação orientada por objetos/PRIMEIRA PARTE - TRABALHO /Sávio, Vitor Castilho e Renan 3° /ApidoZion/obj/Debug/net9.0/scopedcss/bundle/ApidoZion.styles.css
+/Users/tiagopedra/Documents/1 - DOCÊNCIA/2 - FESP PR/Disciplinas/Programação orientada por objetos/PRIMEIRA PARTE - TRABALHO /Sávio, Vitor Castilho e Renan 3° /ApidoZion/obj/Debug/net9.0/staticwebassets.build.json
+/Users/tiagopedra/Documents/1 - DOCÊNCIA/2 - FESP PR/Disciplinas/Programação orientada por objetos/PRIMEIRA PARTE - TRABALHO /Sávio, Vitor Castilho e Renan 3° /ApidoZion/obj/Debug/net9.0/staticwebassets.build.json.cache
+/Users/tiagopedra/Documents/1 - DOCÊNCIA/2 - FESP PR/Disciplinas/Programação orientada por objetos/PRIMEIRA PARTE - TRABALHO /Sávio, Vitor Castilho e Renan 3° /ApidoZion/obj/Debug/net9.0/staticwebassets.development.json
+/Users/tiagopedra/Documents/1 - DOCÊNCIA/2 - FESP PR/Disciplinas/Programação orientada por objetos/PRIMEIRA PARTE - TRABALHO /Sávio, Vitor Castilho e Renan 3° /ApidoZion/obj/Debug/net9.0/staticwebassets.build.endpoints.json
+/Users/tiagopedra/Documents/1 - DOCÊNCIA/2 - FESP PR/Disciplinas/Programação orientada por objetos/PRIMEIRA PARTE - TRABALHO /Sávio, Vitor Castilho e Renan 3° /ApidoZion/obj/Debug/net9.0/ApidoZion.dll
+/Users/tiagopedra/Documents/1 - DOCÊNCIA/2 - FESP PR/Disciplinas/Programação orientada por objetos/PRIMEIRA PARTE - TRABALHO /Sávio, Vitor Castilho e Renan 3° /ApidoZion/obj/Debug/net9.0/refint/ApidoZion.dll
+/Users/tiagopedra/Documents/1 - DOCÊNCIA/2 - FESP PR/Disciplinas/Programação orientada por objetos/PRIMEIRA PARTE - TRABALHO /Sávio, Vitor Castilho e Renan 3° /ApidoZion/obj/Debug/net9.0/ApidoZion.pdb
+/Users/tiagopedra/Documents/1 - DOCÊNCIA/2 - FESP PR/Disciplinas/Programação orientada por objetos/PRIMEIRA PARTE - TRABALHO /Sávio, Vitor Castilho e Renan 3° /ApidoZion/obj/Debug/net9.0/ApidoZion.genruntimeconfig.cache
+/Users/tiagopedra/Documents/1 - DOCÊNCIA/2 - FESP PR/Disciplinas/Programação orientada por objetos/PRIMEIRA PARTE - TRABALHO /Sávio, Vitor Castilho e Renan 3° /ApidoZion/obj/Debug/net9.0/ref/ApidoZion.dll
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\obj\Debug\net9.0\ApidoZion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\obj\Debug\net9.0\ApidoZion.AssemblyInfoInputs.cache
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\obj\Debug\net9.0\ApidoZion.AssemblyInfo.cs
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\obj\Debug\net9.0\ApidoZion.csproj.CoreCompileInputs.cache
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\obj\Debug\net9.0\ApidoZion.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\obj\Debug\net9.0\ApidoZion.dll
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\obj\Debug\net9.0\refint\ApidoZion.dll
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\obj\Debug\net9.0\ApidoZion.pdb
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\bin\Debug\net9.0\ApidoZion.staticwebassets.endpoints.json
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\bin\Debug\net9.0\ApidoZion.exe
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\bin\Debug\net9.0\ApidoZion.deps.json
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\bin\Debug\net9.0\ApidoZion.runtimeconfig.json
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\bin\Debug\net9.0\ApidoZion.dll
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\bin\Debug\net9.0\ApidoZion.pdb
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\obj\Debug\net9.0\scopedcss\bundle\ApidoZion.styles.css
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\obj\Debug\net9.0\staticwebassets.build.json.cache
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\obj\Debug\net9.0\swae.build.ex.cache
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\obj\Debug\net9.0\ApidoZion.genruntimeconfig.cache
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\obj\Debug\net9.0\ref\ApidoZion.dll
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\bin\Debug\net9.0\json\appsettings.Development.json
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\bin\Debug\net9.0\json\appsettings.json
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\bin\Debug\net9.0\json\global.json
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\bin\Debug\net9.0\json\launchSettings.json
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\bin\Debug\net9.0\ApidoZion.staticwebassets.runtime.json
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\obj\Debug\net9.0\compressed\7bh6tx8igt-{0}-fn51c9v7bh-fn51c9v7bh.gz
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\obj\Debug\net9.0\compressed\zpso93b9h8-{0}-nkbk9y7mgl-nkbk9y7mgl.gz
+C:\Users\savio\Desktop\ApidoZion\ApidoZion\obj\Debug\net9.0\compressed\4n6u64nybb-{0}-x7xn564vmz-x7xn564vmz.gz
+C:\Users\savio\Documents\ApidoZion\ApidoZion\bin\Debug\net9.0\json\appsettings.Development.json
+C:\Users\savio\Documents\ApidoZion\ApidoZion\bin\Debug\net9.0\json\appsettings.json
+C:\Users\savio\Documents\ApidoZion\ApidoZion\bin\Debug\net9.0\json\global.json
+C:\Users\savio\Documents\ApidoZion\ApidoZion\bin\Debug\net9.0\json\launchSettings.json
+C:\Users\savio\Documents\ApidoZion\ApidoZion\bin\Debug\net9.0\ApidoZion.staticwebassets.runtime.json
+C:\Users\savio\Documents\ApidoZion\ApidoZion\bin\Debug\net9.0\ApidoZion.staticwebassets.endpoints.json
+C:\Users\savio\Documents\ApidoZion\ApidoZion\bin\Debug\net9.0\ApidoZion.exe
+C:\Users\savio\Documents\ApidoZion\ApidoZion\bin\Debug\net9.0\ApidoZion.deps.json
+C:\Users\savio\Documents\ApidoZion\ApidoZion\bin\Debug\net9.0\ApidoZion.runtimeconfig.json
+C:\Users\savio\Documents\ApidoZion\ApidoZion\bin\Debug\net9.0\ApidoZion.dll
+C:\Users\savio\Documents\ApidoZion\ApidoZion\bin\Debug\net9.0\ApidoZion.pdb
+C:\Users\savio\Documents\ApidoZion\ApidoZion\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\savio\Documents\ApidoZion\ApidoZion\obj\Debug\net9.0\ApidoZion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\savio\Documents\ApidoZion\ApidoZion\obj\Debug\net9.0\ApidoZion.AssemblyInfoInputs.cache
+C:\Users\savio\Documents\ApidoZion\ApidoZion\obj\Debug\net9.0\ApidoZion.AssemblyInfo.cs
+C:\Users\savio\Documents\ApidoZion\ApidoZion\obj\Debug\net9.0\ApidoZion.csproj.CoreCompileInputs.cache
+C:\Users\savio\Documents\ApidoZion\ApidoZion\obj\Debug\net9.0\ApidoZion.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\savio\Documents\ApidoZion\ApidoZion\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\Users\savio\Documents\ApidoZion\ApidoZion\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\Users\savio\Documents\ApidoZion\ApidoZion\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+C:\Users\savio\Documents\ApidoZion\ApidoZion\obj\Debug\net9.0\scopedcss\bundle\ApidoZion.styles.css
+C:\Users\savio\Documents\ApidoZion\ApidoZion\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\savio\Documents\ApidoZion\ApidoZion\obj\Debug\net9.0\staticwebassets.build.json.cache
+C:\Users\savio\Documents\ApidoZion\ApidoZion\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\savio\Documents\ApidoZion\ApidoZion\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\savio\Documents\ApidoZion\ApidoZion\obj\Debug\net9.0\swae.build.ex.cache
+C:\Users\savio\Documents\ApidoZion\ApidoZion\obj\Debug\net9.0\ApidoZion.dll
+C:\Users\savio\Documents\ApidoZion\ApidoZion\obj\Debug\net9.0\refint\ApidoZion.dll
+C:\Users\savio\Documents\ApidoZion\ApidoZion\obj\Debug\net9.0\ApidoZion.pdb
+C:\Users\savio\Documents\ApidoZion\ApidoZion\obj\Debug\net9.0\ApidoZion.genruntimeconfig.cache
+C:\Users\savio\Documents\ApidoZion\ApidoZion\obj\Debug\net9.0\ref\ApidoZion.dll
+C:\Users\savio\Documents\ApidoZion\ApidoZion\obj\Debug\net9.0\compressed\4n6u64nybb-{0}-5uojngrg3q-5uojngrg3q.gz
+C:\Users\savio\Documents\ApidoZion\ApidoZion\obj\Debug\net9.0\compressed\zpso93b9h8-{0}-1dbemzemw9-1dbemzemw9.gz
+C:\Users\savio\Documents\ApidoZion\ApidoZion\obj\Debug\net9.0\compressed\7bh6tx8igt-{0}-nvj05l9nb5-nvj05l9nb5.gz
